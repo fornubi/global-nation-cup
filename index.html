@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Nation Cup 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>⚽ GLOBAL NATION CUP 2026 ⚽</h1>
+    <div class="subtitle">Inspired by Tecmo World Cup Soccer (NES)</div>
+
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="1000" height="700"></canvas>
+
+        <div id="ui">
+            <div class="score-box"><span id="homeTeam">IDN</span> <span id="homeScore">0</span></div>
+            <div style="display:flex;flex-direction:column;align-items:center;gap:4px;">
+                <div id="timer">00:00</div>
+                <div id="periodLabel">1ST HALF</div>
+            </div>
+            <div class="score-box"><span id="awayScore">0</span> <span id="awayTeam">BRA</span></div>
+        </div>
+
+        <div id="menu">
+            <div class="menu-title">GLOBAL NATION CUP 2026</div>
+            <button class="btn" onclick="showGameModeSelect()">START GAME</button>
+            <button class="btn" onclick="showControls()">CONTROLS</button>
+            <div class="controls-info" id="controlsPanel" style="display:none;">
+                <p><strong>Player 1 (HOME):</strong></p>
+                <p>Move: <span>↑</span> <span>↓</span> <span>←</span> <span>→</span></p>
+                <p>Short Pass: <span>Z</span> | Long Pass: <span>X</span> | Shoot: <span>C</span></p>
+                <p>Sprint: <span>SHIFT/E</span> | Switch: <span>Q</span> | Slide: <span>X</span></p>
+                <p><strong>Player 2 (AWAY) - PvP Mode:</strong></p>
+                <p>Move: <span>W</span> <span>A</span> <span>S</span> <span>D</span></p>
+                <p>Short Pass: <span>I</span> | Long Pass: <span>K</span> | Shoot: <span>J</span></p>
+                <p>Sprint: <span>L</span> | Switch: <span>U</span> | Slide: <span>K</span></p>
+                <p>Penalties: aim <span>←/→</span> (P2: <span>A/D</span>), shoot <span>C</span> (P2: <span>J</span>); keeper holds a direction to dive</p>
+            </div>
+        </div>
+
+        <!-- Game Mode Selection -->
+        <div id="gameModeSelect" class="hidden">
+            <div class="menu-title">SELECT GAME MODE</div>
+            <div style="display:flex;gap:20px;justify-content:center;margin-top:30px;">
+                <button class="btn" onclick="setGameMode('PvAI')" style="padding:20px 40px;font-size:1.1rem;">PLAYER VS AI</button>
+                <button class="btn" onclick="setGameMode('PvP')" style="padding:20px 40px;font-size:1.1rem;">PLAYER VS PLAYER</button>
+            </div>
+            <button class="btn" onclick="showMenu()" style="margin-top:30px;">BACK</button>
+        </div>
+
+        <!-- Step 1: Select Difficulty -->
+        <div id="difficultySelect" class="hidden">
+            <div class="menu-title">SELECT DIFFICULTY</div>
+            <div style="display:flex;gap:15px;justify-content:center;margin-top:30px;">
+                <button class="btn" id="diffPassive2" onclick="setDifficultyAndNext('PASSIVE')"
+                    style="padding:15px 30px;font-size:1rem;">PASSIVE</button>
+                <button class="btn" id="diffEasy2" onclick="setDifficultyAndNext('EASY')"
+                    style="padding:15px 30px;font-size:1rem;">EASY</button>
+                <button class="btn" id="diffMedium2" onclick="setDifficultyAndNext('MEDIUM')"
+                    style="padding:15px 30px;font-size:1rem;background:linear-gradient(180deg,#ffd700 0%,#cc9900 100%);border-color:#fff;">MEDIUM</button>
+                <button class="btn" id="diffHard2" onclick="setDifficultyAndNext('HARD')"
+                    style="padding:15px 30px;font-size:1rem;">HARD</button>
+            </div>
+            <button class="btn" onclick="showMenu()" style="margin-top:30px;">BACK</button>
+        </div>
+
+        <!-- Step 2: Select Player Team (1st Team) -->
+        <div id="teamSelect1" class="hidden">
+            <div class="menu-title">SELECT YOUR TEAM (HOME)</div>
+            <div class="team-grid" id="teamGrid1"></div>
+            <button class="btn" onclick="showDifficultySelect()" style="margin-top:20px;">BACK</button>
+        </div>
+
+        <!-- Step 3: Select Opponent Team (2nd Team) -->
+        <div id="teamSelect2" class="hidden">
+            <div class="menu-title">SELECT OPPONENT (AWAY)</div>
+            <div class="team-grid" id="teamGrid2"></div>
+            <button class="btn" onclick="showTeamSelect1()" style="margin-top:20px;">BACK</button>
+        </div>
+
+        <!-- Step 4: Select Jerseys -->
+        <div id="jerseySelect" class="hidden">
+            <div class="menu-title">SELECT JERSEYS</div>
+            <div style="display:flex;gap:40px;justify-content:center;margin-top:20px;">
+                <!-- Home Team Jersey -->
+                <div style="text-align:center;">
+                    <div style="color:#ffd700;font-size:1.2rem;margin-bottom:10px;">HOME: <span id="homeTeamName">-</span></div>
+                    <div style="display:flex;gap:10px;justify-content:center;">
+                        <button class="btn" id="homeJerseyHome" onclick="setHomeJersey('home')" style="padding:10px 20px;">HOME KIT</button>
+                        <button class="btn" id="homeJerseyAway" onclick="setHomeJersey('away')" style="padding:10px 20px;">AWAY KIT</button>
+                    </div>
+                </div>
+                <!-- Away Team Jersey -->
+                <div style="text-align:center;">
+                    <div style="color:#ff4444;font-size:1.2rem;margin-bottom:10px;">AWAY: <span id="awayTeamName">-</span></div>
+                    <div style="display:flex;gap:10px;justify-content:center;">
+                        <button class="btn" id="awayJerseyHome" onclick="setAwayJersey('home')" style="padding:10px 20px;">HOME KIT</button>
+                        <button class="btn" id="awayJerseyAway" onclick="setAwayJersey('away')" style="padding:10px 20px;">AWAY KIT</button>
+                    </div>
+                </div>
+            </div>
+            <button class="btn" onclick="startGameFromSetup()" style="margin-top:30px;padding:15px 40px;font-size:1.1rem;background:linear-gradient(180deg,#2d5a1a 0%,#1a3d0a 100%);">START MATCH!</button>
+            <button class="btn" onclick="showTeamSelect2()" style="margin-top:15px;">BACK</button>
+        </div>
+
+        <div id="periodBreak" class="hidden">
+            <div class="menu-title" id="periodBreakTitle">HALF TIME</div>
+            <div id="periodBreakScore" style="font-size:1.6rem;margin-bottom:20px;">0 - 0</div>
+            <button class="btn" onclick="continueFromBreak()">CONTINUE</button>
+        </div>
+
+        <div id="gameOver" class="hidden">
+            <div class="menu-title" id="resultTitle">MATCH END</div>
+            <div id="finalScore" style="font-size: 2rem; margin-bottom: 20px;"></div>
+            <button class="btn" onclick="resetGame()">PLAY AGAIN</button>
+            <button class="btn" onclick="showMenu()">MAIN MENU</button>
+        </div>
+
+        <div id="penaltyOverlay" class="hidden">
+            <div id="penaltyTitle" style="font-size:1.5rem;color:#ffd700;text-shadow:3px 3px 0 #c41e3a;font-weight:bold;margin-bottom:8px;">PENALTY SHOOTOUT</div>
+            <div class="pen-row"><span class="pen-team" id="penHomeCode">HOME</span><span class="pen-circles" id="penHomeCircles"></span></div>
+            <div class="pen-row"><span class="pen-team" id="penAwayCode">AWAY</span><span class="pen-circles" id="penAwayCircles"></span></div>
+            <div id="penaltyMsg" style="color:#fff;font-size:0.9rem;margin-top:10px;text-shadow:2px 2px 0 #000;">HOME: &lt;-/-&gt; aim, C shoot</div>
+        </div>
+
+        <div id="message"></div>
+
+        <!-- Bottom-left: controlled HOME player info -->
+        <div id="playerInfoHome" style="
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            background: rgba(0,0,0,0.75);
+            border: 2px solid #ffd700;
+            border-radius: 6px;
+            padding: 7px 14px;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            pointer-events: none;
+            display: none;
+        ">
+            <div style="color:#ffd700;font-weight:bold;margin-bottom:3px;font-size:0.7rem;letter-spacing:1px;">YOU</div>
+            <div id="homePlayerNum" style="font-size:1.5rem;font-weight:bold;line-height:1;"></div>
+            <div id="homePlayerRole" style="color:#aaa;font-size:0.72rem;margin-top:2px;"></div>
+            <div id="homePlayerBall" style="color:#ffd700;font-size:0.72rem;margin-top:1px;"></div>
+        </div>
+
+        <!-- Bottom-right: AWAY player with ball info -->
+        <div id="playerInfoAway" style="
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
+            background: rgba(0,0,0,0.75);
+            border: 2px solid #ff4444;
+            border-radius: 6px;
+            padding: 7px 14px;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            font-size: 0.82rem;
+            pointer-events: none;
+            text-align: right;
+            display: none;
+        ">
+            <div style="color:#ff4444;font-weight:bold;margin-bottom:3px;font-size:0.7rem;letter-spacing:1px;">RIVAL
+            </div>
+            <div id="awayPlayerNum" style="font-size:1.5rem;font-weight:bold;line-height:1;"></div>
+            <div id="awayPlayerRole" style="color:#aaa;font-size:0.72rem;margin-top:2px;"></div>
+            <div id="awayPlayerBall" style="color:#ff4444;font-size:0.72rem;margin-top:1px;"></div>
+        </div>
+    </div>
+
+    <script src="teams-data.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>

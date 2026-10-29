@@ -1,0 +1,889 @@
+{
+  "teams": [
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "flag": "ar",
+      "home": {
+        "primary": "#75aadb",
+        "secondary": "#ffffff",
+        "pattern": "vertical_stripes"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#75aadb",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "BRA",
+      "name": "Brazil",
+      "flag": "br",
+      "home": {
+        "primary": "#ffdf00",
+        "secondary": "#009c3b",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#0033cc",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "FRA",
+      "name": "France",
+      "flag": "fr",
+      "home": {
+        "primary": "#002395",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#002395",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "GER",
+      "name": "Germany",
+      "flag": "de",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#000000",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#dd0000",
+        "secondary": "#000000",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "ESP",
+      "name": "Spain",
+      "flag": "es",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffcc00",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "ENG",
+      "name": "England",
+      "flag": "gb",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "POR",
+      "name": "Portugal",
+      "flag": "pt",
+      "home": {
+        "primary": "#c41e3a",
+        "secondary": "#006600",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#c41e3a",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "NED",
+      "name": "Netherlands",
+      "flag": "nl",
+      "home": {
+        "primary": "#ff4500",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ff4500",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "ITA",
+      "name": "Italy",
+      "flag": "it",
+      "home": {
+        "primary": "#0088cc",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#0088cc",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "BEL",
+      "name": "Belgium",
+      "flag": "be",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#000000",
+        "pattern": "vertical_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "CRO",
+      "name": "Croatia",
+      "flag": "hr",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "checkerboard"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "URU",
+      "name": "Uruguay",
+      "flag": "uy",
+      "home": {
+        "primary": "#87ceeb",
+        "secondary": "#ffffff",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#87ceeb",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "MEX",
+      "name": "Mexico",
+      "flag": "mx",
+      "home": {
+        "primary": "#006847",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "USA",
+      "name": "USA",
+      "flag": "us",
+      "home": {
+        "primary": "#3c3b6e",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#3c3b6e",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "JPN",
+      "name": "Japan",
+      "flag": "jp",
+      "home": {
+        "primary": "#bc002d",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#bc002d",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "KOR",
+      "name": "South Korea",
+      "flag": "kr",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#0033cc",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "AUS",
+      "name": "Australia",
+      "flag": "au",
+      "home": {
+        "primary": "#ffcc00",
+        "secondary": "#0066cc",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ffcc00",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco",
+      "flag": "ma",
+      "home": {
+        "primary": "#c1272d",
+        "secondary": "#006233",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#c1272d",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "SEN",
+      "name": "Senegal",
+      "flag": "sn",
+      "home": {
+        "primary": "#006633",
+        "secondary": "#ffcc00",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#006633",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "EGY",
+      "name": "Egypt",
+      "flag": "eg",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#000000",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ed2939",
+        "secondary": "#000000",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "NGA",
+      "name": "Nigeria",
+      "flag": "ng",
+      "home": {
+        "primary": "#008751",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#008751",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "CMR",
+      "name": "Cameroon",
+      "flag": "cm",
+      "home": {
+        "primary": "#007a5e",
+        "secondary": "#ffcc00",
+        "pattern": "vertical_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#007a5e",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "GHA",
+      "name": "Ghana",
+      "flag": "gh",
+      "home": {
+        "primary": "#ce1126",
+        "secondary": "#ffcc00",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ce1126",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "CIV",
+      "name": "Ivory Coast",
+      "flag": "ci",
+      "home": {
+        "primary": "#ff7733",
+        "secondary": "#ffffff",
+        "pattern": "vertical_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ff7733",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "TUN",
+      "name": "Tunisia",
+      "flag": "tn",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "ALG",
+      "name": "Algeria",
+      "flag": "dz",
+      "home": {
+        "primary": "#006633",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#006633",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "RSA",
+      "name": "South Africa",
+      "flag": "za",
+      "home": {
+        "primary": "#007749",
+        "secondary": "#ffcc00",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#007749",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "CAN",
+      "name": "Canada",
+      "flag": "ca",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "CRC",
+      "name": "Costa Rica",
+      "flag": "cr",
+      "home": {
+        "primary": "#007a5e",
+        "secondary": "#ffcc00",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#007a5e",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "PAN",
+      "name": "Panama",
+      "flag": "pa",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "JAM",
+      "name": "Jamaica",
+      "flag": "jm",
+      "home": {
+        "primary": "#009b3a",
+        "secondary": "#ffcc00",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#009b3a",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "HAI",
+      "name": "Haiti",
+      "flag": "ht",
+      "home": {
+        "primary": "#00209f",
+        "secondary": "#ed2939",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#00209f",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "HON",
+      "name": "Honduras",
+      "flag": "hn",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#0066cc",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#0066cc",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "ECU",
+      "name": "Ecuador",
+      "flag": "ec",
+      "home": {
+        "primary": "#ffdd00",
+        "secondary": "#0066cc",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ffdd00",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "flag": "co",
+      "home": {
+        "primary": "#ffcc00",
+        "secondary": "#006633",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#006633",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "CHI",
+      "name": "Chile",
+      "flag": "cl",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "PER",
+      "name": "Peru",
+      "flag": "pe",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "PAR",
+      "name": "Paraguay",
+      "flag": "py",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "BOL",
+      "name": "Bolivia",
+      "flag": "bo",
+      "home": {
+        "primary": "#ffcc00",
+        "secondary": "#ed2939",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ffcc00",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "VEN",
+      "name": "Venezuela",
+      "flag": "ve",
+      "home": {
+        "primary": "#ffcc00",
+        "secondary": "#006633",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ffcc00",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "POL",
+      "name": "Poland",
+      "flag": "pl",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "SUI",
+      "name": "Switzerland",
+      "flag": "ch",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "SRB",
+      "name": "Serbia",
+      "flag": "rs",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#0066cc",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "DEN",
+      "name": "Denmark",
+      "flag": "dk",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "SWE",
+      "name": "Sweden",
+      "flag": "se",
+      "home": {
+        "primary": "#ffcc00",
+        "secondary": "#0066cc",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ffcc00",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "NOR",
+      "name": "Norway",
+      "flag": "no",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#0066cc",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "AUT",
+      "name": "Austria",
+      "flag": "at",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "CZE",
+      "name": "Czech Republic",
+      "flag": "cz",
+      "home": {
+        "primary": "#006847",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#0066cc",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "UKR",
+      "name": "Ukraine",
+      "flag": "ua",
+      "home": {
+        "primary": "#ffcc00",
+        "secondary": "#0066cc",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ffcc00",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "TUR",
+      "name": "Turkey",
+      "flag": "tr",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "IRN",
+      "name": "Iran",
+      "flag": "ir",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#006633",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "KSA",
+      "name": "Saudi Arabia",
+      "flag": "sa",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#006633",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#006633",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "QAT",
+      "name": "Qatar",
+      "flag": "qa",
+      "home": {
+        "primary": "#8a1538",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#8a1538",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "UAE",
+      "name": "United Arab Emirates",
+      "flag": "ae",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#1a1a1a",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "CHN",
+      "name": "China",
+      "flag": "cn",
+      "home": {
+        "primary": "#ed2939",
+        "secondary": "#ffcc00",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#ed2939",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "NZL",
+      "name": "New Zealand",
+      "flag": "nz",
+      "home": {
+        "primary": "#ffffff",
+        "secondary": "#000000",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#000000",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "SLV",
+      "name": "El Salvador",
+      "flag": "sv",
+      "home": {
+        "primary": "#0066cc",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#0066cc",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "GUA",
+      "name": "Guatemala",
+      "flag": "gt",
+      "home": {
+        "primary": "#0066cc",
+        "secondary": "#ffffff",
+        "pattern": "solid"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#0066cc",
+        "pattern": "solid"
+      }
+    },
+    {
+      "code": "DOM",
+      "name": "Dominican Republic",
+      "flag": "do",
+      "home": {
+        "primary": "#0066cc",
+        "secondary": "#ffffff",
+        "pattern": "horizontal_stripes"
+      },
+      "away": {
+        "primary": "#ffffff",
+        "secondary": "#0066cc",
+        "pattern": "solid"
+      }
+    }
+  ]
+}
